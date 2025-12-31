@@ -177,11 +177,13 @@ So:
 
 You can run **100 containers** from the same image but each container gets its own writable layer.
 
+You understand image layers, [read this doc](https://docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/).
+
 #### How containers use layers
 
 When you run a container:
 
-1. All image layers are stacked together to create a unified filesystem view
+1. All image layers are stacked together to create a unified filesystem view.
 2. A new writable layer is added on top specifically for that container
 3. The container can make changes (create/modify files) in this writable layer
 4. The original image layers stay untouched and read-only
@@ -280,7 +282,8 @@ See logs:
 Inspect:
 - `docker inspect <id/name>`
 
-## Docker Storage:
+
+[ABOUT DOCKER STORAGE](./docker-storage)
 
 
 # Kubernetes:
